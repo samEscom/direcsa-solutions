@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { verifyToken } from './infrastructure/auth/jwt';
+import { verifyToken } from './src/infrastructure/auth/jwt';
 
 const PROTECTED_PATHS = [
     '/dashboard',
@@ -10,7 +10,7 @@ const ADMIN_ONLY_METHODS: Record<string, string[]> = {
     '/api/products': ['POST', 'PUT', 'DELETE'],
 };
 
-export async function proxy(req: NextRequest) {
+export async function middleware(req: NextRequest) {
     const { pathname } = req.nextUrl;
     console.log(`[Proxy] Request to: ${pathname}`);
 
