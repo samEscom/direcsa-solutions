@@ -33,24 +33,6 @@ export default function LandingPage() {
                         DIRECSA es una empresa tecnológica dedicada al diseño, venta, instalación y soporte
                         de soluciones audiovisuales con compromiso, honestidad y pasión por la excelencia.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        {/*
-                        <a
-                            href="/products"
-                            className="bg-white text-blue-700 font-semibold px-8 py-3 rounded-xl hover:bg-blue-50 transition-colors shadow-lg"
-                        >
-                            Ver catálogo
-                        </a>
-                        */}
-                        {/* TODO: Implementar registro y login
-                        <a
-                            href="/register"
-                            className="bg-blue-500/30 text-white font-semibold px-8 py-3 rounded-xl border border-white/30 hover:bg-blue-500/50 transition-colors"
-                        >
-                            Crear cuenta gratis
-                        </a>
-                        */}
-                    </div>
                 </div>
             </section>
 
@@ -143,21 +125,6 @@ export default function LandingPage() {
                     </div>
                 </div>
             </section>
-
-            {/* CTA - TODO: Habilitar cuando el sistema de registro esté listo
-            <section className="bg-gray-900 text-white py-16 px-4">
-                <div className="max-w-3xl mx-auto text-center">
-                    <h2 className="text-3xl font-bold mb-4">¿Listo para empezar?</h2>
-                    <p className="text-gray-400 mb-8">Crea tu cuenta y empieza a cotizar hoy mismo.</p>
-                    <a
-                        href="/register"
-                        className="bg-blue-600 text-white font-semibold px-10 py-3 rounded-xl hover:bg-blue-700 transition-colors inline-block"
-                    >
-                        Registrarse gratis
-                    </a>
-                </div>
-            </section>
-            */}
         </>
     );
 }
