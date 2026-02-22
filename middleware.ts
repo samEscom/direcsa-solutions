@@ -3,7 +3,9 @@ import { verifyToken } from './src/infrastructure/auth/jwt';
 
 const PROTECTED_PATHS = [
     '/dashboard',
+    '/control-center',
     '/api/quotes',
+    '/api/admin',
 ];
 
 const ADMIN_ONLY_METHODS: Record<string, string[]> = {
@@ -43,6 +45,7 @@ export async function middleware(req: NextRequest) {
             return NextResponse.json({ error: 'Token inválido o expirado' }, { status: 401 });
         }
         const loginUrl = new URL('/login', req.url);
+        loginUrl.searchParams.set('redirect', pathname);
         return NextResponse.redirect(loginUrl);
     }
 }
@@ -50,7 +53,9 @@ export async function middleware(req: NextRequest) {
 export const config = {
     matcher: [
         '/dashboard/:path*',
+        '/control-center/:path*',
         '/api/products/:path*',
         '/api/quotes/:path*',
+        '/api/admin/:path*',
     ],
 };

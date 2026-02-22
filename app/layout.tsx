@@ -2,8 +2,30 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-    title: 'Direcsa — Catálogo B2B',
-    description: 'Plataforma de cotizaciones y catálogo de productos para empresas',
+    title: 'Direcsa — Audio & Video Profesional',
+    description: 'Diseño, venta e instalación de soluciones audiovisuales profesionales para empresas y recintos.',
+    openGraph: {
+        title: 'Direcsa — Audio & Video Profesional',
+        description: 'Expertos en integración audiovisual y soluciones tecnológicas.',
+        url: 'https://direcsa-audio.vercel.app/soluciones', // TODO: Cambiar por el dominio real
+        siteName: 'Direcsa',
+        images: [
+            {
+                url: '/images/audio_room.jpg',
+                width: 1200,
+                height: 630,
+                alt: 'DIRECSA Soluciones Audiovisuales',
+            },
+        ],
+        locale: 'es_MX',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Direcsa — Audio & Video Profesional',
+        description: 'Distribución y soporte de las mejores marcas de audio y video.',
+        images: ['/images/audio_room.jpg'],
+    },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
