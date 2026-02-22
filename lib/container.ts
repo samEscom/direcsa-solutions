@@ -13,6 +13,7 @@ import { signToken } from '@/src/infrastructure/auth/jwt';
 import { PrismaUserRepository } from '@/src/infrastructure/repositories/PrismaUserRepository';
 import { PrismaProductRepository } from '@/src/infrastructure/repositories/PrismaProductRepository';
 import { PrismaQuoteRepository } from '@/src/infrastructure/repositories/PrismaQuoteRepository';
+import { PrismaContactRepository } from '@/src/infrastructure/repositories/PrismaContactRepository';
 
 // Use Cases
 import { RegisterUser } from '@/src/application/use-cases/user/RegisterUser';
@@ -25,16 +26,20 @@ import { DeleteProduct } from '@/src/application/use-cases/product/DeleteProduct
 import { CreateQuote } from '@/src/application/use-cases/quote/CreateQuote';
 import { GetQuotes } from '@/src/application/use-cases/quote/GetQuotes';
 import { GetQuoteById } from '@/src/application/use-cases/quote/GetQuoteById';
+import { CreateContact } from '@/src/application/use-cases/contact/CreateContact';
+import { GetContacts } from '@/src/application/use-cases/contact/GetContacts';
 
 // Controllers
 import { AuthController } from '@/src/interfaces/controllers/AuthController';
 import { ProductController } from '@/src/interfaces/controllers/ProductController';
 import { QuoteController } from '@/src/interfaces/controllers/QuoteController';
+import { ContactController } from '@/src/interfaces/controllers/ContactController';
 
 // ─── Repositories (singletons) ───────────────────────────────────────────────
 const userRepository = new PrismaUserRepository(prisma);
 const productRepository = new PrismaProductRepository(prisma);
 const quoteRepository = new PrismaQuoteRepository(prisma);
+const contactRepository = new PrismaContactRepository(prisma);
 
 // ─── Controller factories ─────────────────────────────────────────────────────
 
@@ -58,4 +63,10 @@ export function getQuoteController(): QuoteController {
     const getQuoteById = new GetQuoteById(quoteRepository);
     const createQuote = new CreateQuote(quoteRepository);
     return new QuoteController(getQuotes, getQuoteById, createQuote);
+}
+
+export function getContactController(): ContactController {
+    const createContact = new CreateContact(contactRepository);
+    const getContacts = new GetContacts(contactRepository);
+    return new ContactController(createContact, getContacts);
 }

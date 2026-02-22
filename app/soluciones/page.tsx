@@ -1,13 +1,23 @@
 import type { Metadata } from 'next';
 
+import Image from 'next/image';
+
 export const metadata: Metadata = {
     title: 'Soluciones — DIRECSA',
     description: 'Expertos en integración audiovisual para centros religiosos, entretenimiento y corporativos.',
 };
 
 export default function SolutionsPage() {
+    const brands = [
+        { name: 'Shure', logo: '/images/logos/logo-shure-01.jpg' },
+        { name: 'Sonos', logo: '/images/logos/logo- Sonos_Wordmark_Black (2)-01-d2a961-original-1760697728.png' },
+        { name: 'Biamp', logo: '/images/logos/logo-biamp-01.jpg' },
+        { name: 'Nexo', logo: '/images/logos/logo-nexo-01.jpg' },
+    ];
+
     return (
         <div className="bg-white">
+            {/* ... (previous sections remain the same) */}
             {/* Header Hero */}
             <section className="relative h-[60vh] flex items-center justify-center text-white overflow-hidden">
                 {/* Background Image with Overlay */}
@@ -102,18 +112,21 @@ export default function SolutionsPage() {
                         tenga el rendimiento y la durabilidad que tu proyecto exige.
                     </p>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-                        <div className="p-8 border border-gray-100 rounded-2xl grayscale hover:grayscale-0 transition-all">
-                            <span className="text-xl font-bold text-gray-800">SHURE</span>
-                        </div>
-                        <div className="p-8 border border-gray-100 rounded-2xl grayscale hover:grayscale-0 transition-all">
-                            <span className="text-xl font-bold text-gray-800">SONOS</span>
-                        </div>
-                        <div className="p-8 border border-gray-100 rounded-2xl grayscale hover:grayscale-0 transition-all">
-                            <span className="text-xl font-bold text-gray-800">BOSE</span>
-                        </div>
-                        <div className="p-8 border border-gray-100 rounded-2xl grayscale hover:grayscale-0 transition-all">
-                            <span className="text-xl font-bold text-gray-800">CRESTRON</span>
-                        </div>
+                        {brands.map((brand) => (
+                            <div
+                                key={brand.name}
+                                className="p-8 border border-gray-100 rounded-3xl grayscale hover:grayscale-0 transition-all flex items-center justify-center bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300"
+                            >
+                                <div className="relative w-full aspect-[3/1]">
+                                    <Image
+                                        src={brand.logo}
+                                        alt={`Logo de ${brand.name}`}
+                                        fill
+                                        className="object-contain"
+                                    />
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
