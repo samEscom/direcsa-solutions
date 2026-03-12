@@ -27,15 +27,15 @@ export default function ContactForm() {
 
     if (status === 'success') {
         return (
-            <div className="h-full flex flex-col items-center justify-center text-center p-8 bg-white rounded-3xl shadow-sm">
-                <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-2xl mb-4">
+            <div className="h-full flex flex-col items-center justify-center text-center p-8 bg-audio-surface rounded-3xl">
+                <div className="w-16 h-16 bg-audio-primary/20 text-audio-primary rounded-full flex items-center justify-center text-2xl mb-4">
                     ✓
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">¡Mensaje enviado!</h2>
-                <p className="text-gray-600">Nos pondremos en contacto contigo lo antes posible.</p>
+                <h2 className="text-2xl font-bold text-audio-text mb-2">¡Mensaje enviado!</h2>
+                <p className="text-audio-text/60">Nos pondremos en contacto contigo lo antes posible.</p>
                 <button
                     onClick={() => setStatus('idle')}
-                    className="mt-6 text-blue-600 font-medium hover:underline"
+                    className="mt-6 text-audio-primary font-medium hover:underline"
                 >
                     Enviar otro mensaje
                 </button>
@@ -44,55 +44,55 @@ export default function ContactForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="space-y-6 bg-white p-8 md:p-12 rounded-3xl shadow-sm">
+        <form onSubmit={handleSubmit} className="space-y-6 bg-audio-surface p-8 md:p-12 rounded-3xl">
             <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Nombre completo</label>
+                <label className="block text-sm font-medium text-audio-text/80 mb-1">Nombre completo</label>
                 <input
                     required
                     name="name"
                     type="text"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-black"
+                    className="w-full px-4 py-3 rounded-xl border border-audio-surface-border bg-audio-bg text-audio-text placeholder-audio-text/40 focus:ring-2 focus:ring-audio-primary focus:border-transparent outline-none transition-all"
                     placeholder="Tu nombre"
                 />
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Correo electrónico</label>
+                    <label className="block text-sm font-medium text-audio-text/80 mb-1">Correo electrónico</label>
                     <input
                         required
                         name="email"
                         type="email"
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-black"
+                        className="w-full px-4 py-3 rounded-xl border border-audio-surface-border bg-audio-bg text-audio-text placeholder-audio-text/40 focus:ring-2 focus:ring-audio-primary focus:border-transparent outline-none transition-all"
                         placeholder="correo@ejemplo.com"
                     />
                 </div>
                 <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
+                    <label className="block text-sm font-medium text-audio-text/80 mb-1">Teléfono</label>
                     <input
                         name="phone"
                         type="tel"
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-black"
+                        className="w-full px-4 py-3 rounded-xl border border-audio-surface-border bg-audio-bg text-audio-text placeholder-audio-text/40 focus:ring-2 focus:ring-audio-primary focus:border-transparent outline-none transition-all"
                         placeholder="55 1234 5678"
                     />
                 </div>
             </div>
             <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Descripción</label>
+                <label className="block text-sm font-medium text-audio-text/80 mb-1">Descripción</label>
                 <textarea
                     required
                     name="description"
                     rows={4}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-none text-black"
+                    className="w-full px-4 py-3 rounded-xl border border-audio-surface-border bg-audio-bg text-audio-text placeholder-audio-text/40 focus:ring-2 focus:ring-audio-primary focus:border-transparent outline-none transition-all resize-none"
                     placeholder="Cuéntanos un poco sobre tu necesidad..."
                 ></textarea>
             </div>
             {status === 'error' && (
-                <p className="text-red-500 text-sm">Hubo un error al enviar el mensaje. Inténtalo de nuevo.</p>
+                <p className="text-audio-highlight text-sm">Hubo un error al enviar el mensaje. Inténtalo de nuevo.</p>
             )}
             <button
                 disabled={status === 'loading'}
                 type="submit"
-                className="w-full bg-blue-600 text-white font-bold py-4 rounded-xl hover:bg-blue-700 transition-colors shadow-lg disabled:opacity-50"
+                className="w-full bg-audio-primary text-audio-navbar font-bold py-4 rounded-xl hover:bg-audio-secondary transition-colors shadow-lg disabled:opacity-50 cursor-pointer"
             >
                 {status === 'loading' ? 'Enviando...' : 'Enviar mensaje'}
             </button>

@@ -29,7 +29,6 @@ export default function LandingPage() {
     return (
         <>
             {/* Hero Section */}
-            {/* ... (keep existing hero) ... */}
             <section className="relative h-[80vh] flex items-center justify-center text-white overflow-hidden">
                 <div
                     className="absolute inset-0 z-0"
@@ -39,17 +38,17 @@ export default function LandingPage() {
                         backgroundPosition: 'center',
                     }}
                 >
-                    <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
+                    <div className="absolute inset-0 bg-audio-bg/70 backdrop-blur-[2px]"></div>
                 </div>
 
                 <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
-                    <span className="inline-block bg-blue-500/30 text-blue-100 text-sm font-medium px-4 py-1.5 rounded-full mb-6">
+                    <span className="inline-block bg-audio-primary/20 text-audio-primary text-sm font-medium px-4 py-1.5 rounded-full mb-6 border border-audio-primary/30">
                         Soluciones Tecnológicas
                     </span>
-                    <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-6">
+                    <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-6 text-audio-text">
                         Transformamos ideas en experiencias audiovisuales
                     </h1>
-                    <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
+                    <p className="text-xl text-audio-text/70 mb-10 max-w-2xl mx-auto">
                         DIRECSA es una empresa tecnológica dedicada al diseño, venta, instalación y soporte
                         de soluciones audiovisuales con compromiso, honestidad y pasión por la excelencia.
                     </p>
@@ -57,10 +56,10 @@ export default function LandingPage() {
             </section>
 
             {/* Quienes somos */}
-            <section className="py-20 px-4 bg-white">
+            <section className="py-20 px-4 bg-audio-surface">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-6">Quiénes somos</h2>
-                    <p className="text-lg text-gray-600 leading-relaxed">
+                    <h2 className="text-3xl font-bold text-audio-text mb-6">Quiénes somos</h2>
+                    <p className="text-lg text-audio-text/70 leading-relaxed">
                         DIRECSA es una empresa tecnológica dedicada al diseño, venta, instalación y soporte
                         de soluciones audiovisuales. Creamos soluciones audiovisuales que transforman ideas en
                         experiencias, con compromiso, honestidad y pasión por la excelencia.
@@ -69,9 +68,9 @@ export default function LandingPage() {
             </section>
 
             {/* Nuestros servicios */}
-            <section className="py-20 px-4 bg-gray-50">
+            <section className="py-20 px-4 bg-audio-bg">
                 <div className="max-w-6xl mx-auto">
-                    <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+                    <h2 className="text-3xl font-bold text-center text-audio-text mb-12">
                         Nuestros servicios
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -102,10 +101,10 @@ export default function LandingPage() {
                                 desc: 'Soluciones para eventos de todo tipo.',
                             },
                         ].map((s) => (
-                            <div key={s.title} className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+                            <div key={s.title} className="bg-audio-surface rounded-2xl p-8 border border-audio-surface-border hover:border-audio-primary/40 transition-colors">
                                 <div className="text-4xl mb-4">{s.icon}</div>
-                                <h3 className="text-lg font-semibold text-gray-900 mb-2">{s.title}</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">{s.desc}</p>
+                                <h3 className="text-lg font-semibold text-audio-text mb-2">{s.title}</h3>
+                                <p className="text-audio-text/60 text-sm leading-relaxed">{s.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -113,9 +112,9 @@ export default function LandingPage() {
             </section>
 
             {/* Por qué elegirnos */}
-            <section className="py-20 px-4 bg-white">
+            <section className="py-20 px-4 bg-audio-surface">
                 <div className="max-w-6xl mx-auto">
-                    <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+                    <h2 className="text-3xl font-bold text-center text-audio-text mb-12">
                         Por qué elegirnos
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -138,8 +137,8 @@ export default function LandingPage() {
                         ].map((item) => (
                             <div key={item.title} className="text-center">
                                 <div className="text-4xl mb-4">{item.icon}</div>
-                                <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                                <h3 className="text-lg font-semibold text-audio-text mb-2">{item.title}</h3>
+                                <p className="text-audio-text/60 text-sm leading-relaxed">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -147,39 +146,39 @@ export default function LandingPage() {
             </section>
 
             {/* Contacto */}
-            <section className="py-24 px-4 bg-blue-600 text-white overflow-hidden relative">
+            <section className="py-24 px-4 overflow-hidden relative" style={{ background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)' }}>
                 {/* Decorative background elements */}
-                <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-blue-500 rounded-full blur-3xl opacity-20"></div>
-                <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-blue-400 rounded-full blur-3xl opacity-20"></div>
+                <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-audio-primary rounded-full blur-3xl opacity-10"></div>
+                <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-audio-secondary rounded-full blur-3xl opacity-10"></div>
 
                 <div className="max-w-6xl mx-auto relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div className="text-left">
-                            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-audio-text">
                                 Hablemos de tu próximo proyecto
                             </h2>
-                            <p className="text-xl text-blue-100 mb-12 max-w-lg leading-relaxed">
+                            <p className="text-xl text-audio-text/60 mb-12 max-w-lg leading-relaxed">
                                 Estamos listos para escucharte y diseñar la solución técnica que tu espacio necesita.
                                 Déjanos tus datos y nos pondremos en contacto contigo lo antes posible.
                             </p>
 
                             <div className="space-y-8">
                                 <div className="flex items-center gap-6">
-                                    <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center text-2xl shadow-inner border border-white/20">
+                                    <div className="w-14 h-14 bg-audio-primary/10 backdrop-blur-md rounded-2xl flex items-center justify-center text-2xl border border-audio-primary/20">
                                         📍
                                     </div>
                                     <div>
-                                        <p className="text-blue-200 text-sm font-medium uppercase tracking-wider">Ubicación</p>
-                                        <p className="text-lg font-semibold">Ciudad de México, México</p>
+                                        <p className="text-audio-text/50 text-sm font-medium uppercase tracking-wider">Ubicación</p>
+                                        <p className="text-lg font-semibold text-audio-text">Ciudad de México, México</p>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-6">
-                                    <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center text-2xl shadow-inner border border-white/20">
+                                    <div className="w-14 h-14 bg-audio-primary/10 backdrop-blur-md rounded-2xl flex items-center justify-center text-2xl border border-audio-primary/20">
                                         ✉️
                                     </div>
                                     <div>
-                                        <p className="text-blue-200 text-sm font-medium uppercase tracking-wider">Correo</p>
-                                        <p className="text-lg font-semibold">direcsa.audio@gmail.com</p>
+                                        <p className="text-audio-text/50 text-sm font-medium uppercase tracking-wider">Correo</p>
+                                        <p className="text-lg font-semibold text-audio-text">direcsa.solutions@gmail.com</p>
                                     </div>
                                 </div>
                             </div>
