@@ -24,6 +24,7 @@ export const products: Product[] = [
     ],
     description: 'Diseñada para ingenieros que necesitan rapidez y precisión, la CQ-18T ofrece un flujo de trabajo ágil con procesamiento potente y control inalámbrico. Es ideal tanto para sonido en vivo como para producción, brindando flexibilidad sin comprometer la calidad de audio.',
     specs: {
+      'Marca': 'Allen & Heath',
       'Canales': '18',
       'Entradas': '8 XLR + 8 combo',
       'Salidas': '6 auxiliares TRS + LR XLR',
@@ -45,6 +46,7 @@ export const products: Product[] = [
     ],
     description: 'Pensada para configuraciones más pequeñas, la CQ-12T ofrece una experiencia de mezcla clara e intuitiva. Es perfecta para ingenieros móviles, espacios reducidos y creadores de contenido que buscan control sin complicaciones.',
     specs: {
+      'Marca': 'Allen & Heath',
       'Canales': '12',
       'Entradas': '5 XLR + 5 combo',
       'Salidas': '6 auxiliares TRS',
@@ -66,6 +68,7 @@ export const products: Product[] = [
     ],
     description: 'Diseñada para ofrecer impacto y claridad, la CVE-15 combina graves firmes con agudos definidos. Es una solución versátil para eventos en vivo, DJs y sistemas de sonido profesionales.',
     specs: {
+      'Marca': 'Cerwin Vega',
       'Potencia': '1000W',
       'Frecuencia': '45 Hz – 18 kHz',
       'SPL': '128 dB',
@@ -85,6 +88,7 @@ export const products: Product[] = [
     ],
     description: 'Diseñado para bajas frecuencias de alto impacto, el CVE-18S entrega graves profundos que transforman el sonido en una experiencia física. Ideal para reforzar cualquier sistema profesional.',
     specs: {
+      'Marca': 'Cerwin Vega',
       'Potencia': '1000W',
       'Frecuencia': 'desde 28 Hz',
       'Tipo': 'Subwoofer activo'
@@ -103,6 +107,7 @@ export const products: Product[] = [
     ],
     description: 'Reconocido a nivel mundial, el SM58 es un estándar en presentaciones en vivo. Ofrece claridad vocal consistente, durabilidad y un rendimiento confiable en cualquier escenario.',
     specs: {
+      'Marca': 'Shure',
       'Patrón': 'Cardioide',
       'Frecuencia': '50 Hz – 15 kHz',
       'Construcción': 'Rejilla de acero'
@@ -121,6 +126,7 @@ export const products: Product[] = [
     ],
     description: 'Diseñada para entornos exigentes, la K12.2 ofrece gran claridad, potencia y margen dinámico. Es una opción confiable para profesionales que requieren rendimiento constante.',
     specs: {
+      'Marca': 'QSC',
       'Potencia': '2000W pico',
       'SPL': '132 dB',
       'Tamaño': '12”'
@@ -139,6 +145,7 @@ export const products: Product[] = [
     ],
     description: 'Un sistema completo diseñado para portabilidad y rendimiento. Ideal para eventos pequeños, presentaciones y música en vivo donde se requiere cobertura uniforme.',
     specs: {
+      'Marca': 'dB Technologies',
       'Potencia': '1000W',
       'SPL': '121 dB',
       'LF': '12”',
@@ -158,6 +165,7 @@ export const products: Product[] = [
     ],
     description: 'Incluye todo lo necesario para capturar una batería completa con claridad y balance. Ideal tanto para uso en vivo como en estudio.',
     specs: {
+      'Marca': 'Shure',
       'Micrófonos': '7',
       'Incluye': 'cables y soportes',
       'Uso': 'batería completa'
