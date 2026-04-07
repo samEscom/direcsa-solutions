@@ -51,6 +51,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                                     <a href="/soluciones" className="text-audio-text hover:text-audio-primary text-sm font-medium transition-colors">
                                         Soluciones
                                     </a>
+                                    <a href="/offers" className="text-audio-text hover:text-audio-primary text-sm font-medium transition-colors">
+                                        Ofertas
+                                    </a>
                                     <a href="/catalogo" className="text-audio-text hover:text-audio-primary text-sm font-medium transition-colors">
                                         Catálogo
                                     </a>
